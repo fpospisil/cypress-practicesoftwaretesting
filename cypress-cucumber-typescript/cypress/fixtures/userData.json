@@ -1,0 +1,13 @@
+{
+	"firstName": "Robin",
+	"lastName": "Karen",
+	"dob": "2000-07-07",
+	"address": "Upper Street",
+	"postcode": "12333",
+	"city": "Prague",
+	"state": "Czechia",
+	"country": "Czechia",
+	"phoneNumber": "123456789",
+	"email": "okurka@test.cz",
+	"password": "Test1234++++"
+}
