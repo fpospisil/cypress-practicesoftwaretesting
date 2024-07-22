@@ -8,7 +8,7 @@ dotenv.config()
 
 export default defineConfig({
 	e2e: {
-		specPattern: 'cypress/e2e/**/*.feature',
+		specPattern: ['cypress/e2e/**/*.feature', 'cypress/e2e/**/*.ts'],
 		viewportWidth: 1920,
 		viewportHeight: 1080,
 		supportFile: 'cypress/support/e2e.ts',

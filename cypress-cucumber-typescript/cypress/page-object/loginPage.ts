@@ -1,5 +1,3 @@
-// cypress/page-object/loginPage.ts
-
 export default class LoginPage {
     // Locators
     get usernameInput() {

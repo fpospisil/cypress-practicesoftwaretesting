@@ -1,14 +1,15 @@
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
-//import { homepage } from '../../page-object/homepage'
+import { homepage } from '../../page-object/homepage'
 
 Given('the user is on the main page', () => {
-	// Code for the user is on the main page
+	homepage.visit();
 })
 
 When('the user click on filter', () => {
-	// Code for the user click on filter
+	homepage.setSliderValue(50);
+	homepage.filter();
 })
 
 Then('the user should see the filtered products', () => {
-	// Code for the user should see the filtered products
+	//homepage.noResult();
 })
