@@ -6,7 +6,7 @@ Given('the user is on the main page', () => {
 })
 
 When('the user click on filter', () => {
-	homepage.setSliderValue(50);
+	homepage.slider(50);
 	homepage.filter();
 })
 

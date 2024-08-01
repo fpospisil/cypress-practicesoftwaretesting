@@ -17,14 +17,11 @@ export default class Homepage {
         cy.visit('https://practicesoftwaretesting.com/');
     }
 
-    setSliderValue(value) {
+    slider(value) {
         this.rangeMax.then($el => {
-            const width = $el.width();
-            const newValue = value / 200 * width;
-            cy.wrap($el)
-                .trigger('mousedown', { which: 1 })
-                .trigger('mousemove', { clientX: newValue })
-                .trigger('mouseup');
+            const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
+            nativeInputValueSetter.call($el[0], value);
+            $el[0].dispatchEvent(new Event('input', { bubbles: true }));
         });
     }
 
